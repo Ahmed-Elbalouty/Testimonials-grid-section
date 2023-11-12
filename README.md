@@ -1,2 +1,5 @@
-# Testimonials-grid-section
-This repository for solving "Testimonials grid section" challenge from Front-End Mentor challenges.
+# Frontend Mentor - Testimonials grid section
+
+![Design preview for the Testimonials grid section coding challenge](./design/desktop-preview.jpg)
+
+## Welcome! 👋

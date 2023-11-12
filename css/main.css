@@ -1,0 +1,132 @@
+/* Start Vriables */
+:root{
+    /* Primary */
+    --Moderate-violet :  hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Neutral */
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%); 
+}
+/* End Vriables */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+.container{
+    min-height: 100vh;
+    background-color: var(--Light-grayish-blue);
+    display: grid;
+    place-content: center;
+}
+.container .parent{
+    padding: 50px 150px;
+    display: grid;
+    gap: 20px;
+    grid-template-areas: "dan dan dan jon kira"
+    "dan dan dan jon kira"
+    "dan dan dan jon kira"
+    "jen pat pat pat kira"
+    "jen pat pat pat kira";
+}
+.container .parent > div{
+    padding: 20px;
+    border-radius: 10px;
+}
+.container .parent > div .head{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.container .parent > div .head img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--Light-gray);
+}
+.container .parent > div .head .info h3{
+    color: var(--Light-gray);
+    margin-bottom: -5px;
+}
+.container .parent > div .head .info span{
+    color: hsl(0, 0%, 81%, .5);
+    font-size: 11px;
+}
+.container .parent > div .main{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+.container .parent > div .sec{
+    color: hsl(0, 0%, 81%, .7);
+    font-size: 12px;
+}
+.container .parent > div p{
+    line-height: 1.3;
+}
+.container .parent .dan{
+    grid-area: dan;
+    background-color: var(--Moderate-violet);
+    position: relative;
+    z-index: 100;
+}
+.container .parent .dan::before{
+    content: "";
+    position: absolute;
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0;
+    right: 15%;
+    width: 85px;
+    height: 85px;
+    z-index: -1;
+}
+.container .parent .jon{
+    grid-area: jon;
+    background-color: var(--Very-dark-grayish-blue);
+}
+.container .parent .jen{
+    grid-area: jen;
+    background-color: var(--White);
+}
+.container .parent .pat{
+    grid-area: pat;
+    background-color: var(--Very-dark-blackish-blue);
+}
+.container .parent .kira{
+    grid-area: kira;
+    background-color: var(--White);
+}
+.container .parent .jen .head .info h3,
+.container .parent .kira .head .info h3{
+    color: var(--Very-dark-grayish-blue);
+}
+.container .parent .jen .head .info span,
+.container .parent .kira .head .info span{
+    color: hsl(217, 19%, 35%, .5);
+}
+.container .parent .jen .main,
+.container .parent .kira .main{
+    color: var(--Very-dark-grayish-blue);
+}
+.container .parent .jen .sec,
+.container .parent .kira .sec{
+    color: hsl(217, 19%, 35%, .7);
+}
+@media (max-width: 1000px) {
+    .container .parent{
+        padding: 20px;
+        grid-template-areas: "dan" "dan" "jon" "jen" "pat" "pat" "kira" "kira";
+        gap: 10px;
+    }
+}
